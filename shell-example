@@ -1,0 +1,27 @@
+
+# code shell script for common using
+
+#LOG file content
+# 2020-11-10 23:56:10.116 [pool-1-thread-1] INFO  [123-234-567-11123333] cn.com.biz.service.cache.Service - updateMap 更新配置开始...
+
+LOGFILE=log-files-where-you-located
+awk 'BEGIN{for (i=1;i<=20;i++)
+{ minute = 30 +i; print "\n" minute "分钟:\n"; cmd = "grep '\''2020-11-09 22:"  minute "'\'' $LOGFILE | 
+awk '\'' {if ($8 in data){ data[$8] = data[$8] +1;}else{ data[$8] = 1;}
+} 
+END{for (i in data){ print i, data[i];}} '\'' "; system(cmd);}}'
+
+# output like:
+31分钟:
+
+refresh 2
+updateXapdEnumMap 2
+updateGlEventJournalMap 2
+updateGlMatchRuleList 2
+updateSubjectPointerMap 2
+updateGlEventMap 2
+
+32分钟:
+
+
+33分钟:
