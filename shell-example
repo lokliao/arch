@@ -15,11 +15,11 @@ END{for (i in data){ print i, data[i];}} '\'' "; system(cmd);}}'
 31分钟:
 
 refresh 2
-updateXapdEnumMap 2
-updateGlEventJournalMap 2
-updateGlMatchRuleList 2
-updateSubjectPointerMap 2
-updateGlEventMap 2
+updateEnumMap 2
+updateJournalMap 2
+updateRuleList 2
+updateSubjectMap 2
+updateventMap 2
 
 32分钟:
 
